@@ -16,13 +16,13 @@ interface Cycle {
 
 interface CyclesContextType {
   cycles: Cycle[]
-  activeCycle: Cycle | null
+  activeCycle: Cycle | undefined
   activeCycleId: string | null
   amountSecondsPassed: number
   markCurrentCycleAsFinished: () => void
   setSecondsPassed: (seconds: number) => void
   createNewCycle: (data: CreateCycleData) => void
-  interruptCurrentCycles: () => void
+  interruptCurrentCycle: () => void
 }
 
 export const CyclesContext = createContext({} as CyclesContextType)
